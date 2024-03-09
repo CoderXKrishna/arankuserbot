@@ -47,12 +47,12 @@ from telethon.tl.functions.upload import (
 )
 from telethon.tl.types import (
     Document,
-    InputDocumentFileLoarankion,
+    InputDocumentFileLocation,
     InputFile,
     InputFileBig,
-    InputFileLoarankion,
-    InputPeerPhotoFileLoarankion,
-    InputPhotoFileLoarankion,
+    InputFileLocation,
+    InputPeerPhotoFileLocation,
+    InputPhotoFileLocation,
     TypeInputFile,
 )
 
@@ -63,12 +63,12 @@ except ImportError:
 
 log: logging.Logger = logging.getLogger("fasttelethon")
 
-TypeLoarankion = Union[
+TypeLocation = Union[
     Document,
-    InputDocumentFileLoarankion,
-    InputPeerPhotoFileLoarankion,
-    InputFileLoarankion,
-    InputPhotoFileLoarankion,
+    InputDocumentFileLocation,
+    InputPeerPhotoFileLocation,
+    InputFileLocation,
+    InputPhotoFileLocation,
 ]
 
 
@@ -83,7 +83,7 @@ class DownloadSender:
         self,
         client: TelegramClient,
         sender: MTProtoSender,
-        file: TypeLoarankion,
+        file: TypeLocation,
         offset: int,
         limit: int,
         stride: int,
@@ -197,7 +197,7 @@ class ParallelTransferrer:
         return math.ceil((file_size / full_size) * max_count)
 
     async def _init_download(
-        self, connections: int, file: TypeLoarankion, part_count: int, part_size: int
+        self, connections: int, file: TypeLocation, part_count: int, part_size: int
     ) -> None:
         minimum, remainder = divmod(part_count, connections)
 
@@ -226,7 +226,7 @@ class ParallelTransferrer:
 
     async def _create_download_sender(
         self,
-        file: TypeLoarankion,
+        file: TypeLocation,
         index: int,
         part_size: int,
         stride: int,
@@ -315,7 +315,7 @@ class ParallelTransferrer:
 
     async def download(
         self,
-        file: TypeLoarankion,
+        file: TypeLocation,
         file_size: int,
         part_size_kb: Optional[float] = None,
         connection_count: Optional[int] = None,
@@ -396,15 +396,15 @@ async def _internal_transfer_to_telegram(
 
 async def download_file(
     client: TelegramClient,
-    loarankion: TypeLoarankion,
+    Location: TypeLocation,
     out: BinaryIO,
     progress_callback: callable = None,
 ) -> BinaryIO:
-    size = loarankion.size
-    dc_id, loarankion = utils.get_input_loarankion(loarankion)
+    size = Location.size
+    dc_id, Location = utils.get_input_Location(Location)
     # We lock the transfers because telegram has connection count limits
     downloader = ParallelTransferrer(client, dc_id)
-    downloaded = downloader.download(loarankion, size)
+    downloaded = downloader.download(Location, size)
     async for x in downloaded:
         out.write(x)
         if progress_callback:
