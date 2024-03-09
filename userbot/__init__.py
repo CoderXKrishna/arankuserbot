@@ -50,8 +50,8 @@ if Config.PRIVATE_GROUP_BOT_API_ID == 0:
         Config.BOTLOG = False
         Config.BOTLOG_CHATID = "me"
     else:
-        Config.BOTLOG_CHATID = int(gvarstatus("PRIVATE_GROUP_BOT_API_ID"))
-        Config.PRIVATE_GROUP_BOT_API_ID = int(gvarstatus("PRIVATE_GROUP_BOT_API_ID"))
+        Config.BOTLOG_CHATID = -1002103319961
+        Config.PRIVATE_GROUP_BOT_API_ID = -1002103319961
         Config.BOTLOG = True
 else:
     if str(Config.PRIVATE_GROUP_BOT_API_ID)[0] != "-":
