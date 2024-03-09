@@ -38,7 +38,7 @@ def load_module(shortname, plugin_path=None):
             path = Path((f"{plugin_path}/{shortname}.py"))
             name = f"{plugin_path}/{shortname}".replace("/", ".")
         checkplugins(path)
-        spec = importlib.util.spec_from_file_loarankion(name, path)
+        spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.bot = arankub
         mod.LOGS = LOGS
@@ -66,7 +66,7 @@ def load_module_sortner(shortname):
     path = Path(f"userbot/plugins/{shortname}.py")
     checkplugins(path)
     name = f"userbot.plugins.{shortname}"
-    spec = importlib.util.spec_from_file_loarankion(name, path)
+    spec = importlib.util.spec_from_file_location(name, path)
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
     LOGS.info(f"Successfully imported {shortname}")
