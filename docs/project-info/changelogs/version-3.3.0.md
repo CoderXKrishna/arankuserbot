@@ -2,7 +2,7 @@
 
 ## ≡ Base Changes
 
-* Changed the docker base image to `catub/catuserbot:latest`. Users can use `catub/base:bullseye` in case of blacklisting by changing the image name in the Dockerfile.
+* Changed the docker base image to `arankub/arankuserbot:latest`. Users can use `arankub/base:bullseye` in case of blacklisting by changing the image name in the Dockerfile.
 * Added a Docker Compose file with database support. Users can run the bot with a database, and if they don't set `DB_URI` in `config.py`, it will automatically make an SQLite database.
 * Added new [Documentation](https://arank-1.gitbook.io/untitled//) .
 * Changed the plugin log style in `botlogger` to make it less spammy.
