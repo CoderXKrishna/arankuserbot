@@ -38,7 +38,7 @@ sudo dnf install chromium
 ```
 {% endcode %}
 
-{% code title="Go to catuserbot directory and open the config.py " overflow="wrap" %}
+{% code title="Go to arankuserbot directory and open the config.py " overflow="wrap" %}
 ```batch
 nano config.py
 ```
@@ -76,7 +76,7 @@ sudo dnf install https://dl.google.com/linux/direct/google-chrome-stable_current
 ```
 {% endcode %}
 
-{% code title="Go to catuserbot directory and open the config.py" overflow="wrap" %}
+{% code title="Go to arankuserbot directory and open the config.py" overflow="wrap" %}
 ```batch
 nano config.py
 ```
