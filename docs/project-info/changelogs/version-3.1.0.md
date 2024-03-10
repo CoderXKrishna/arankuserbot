@@ -6,10 +6,10 @@
 
 * #### Additions
   * Added External repo support (so you can set `EXTERNAL_REPO` var with `True` or your custom plugins repo link to get custom plugins).
-  * From now onwards there is no Badcat or Goodcat, while deploying you only need to set a var `BADCAT = True` in vars to get 18+ plugins.
+  * From now onwards there is no Badcat or Goodcat, while deploying you only need to set a var `BADARANK = True` in vars to get 18+ plugins.
   * Added Spotify now support (you can check which song you are playing on your spotify account from Telegram).
   * Added fake user quotly support (`.fq username text`).
-  * Added `PING_PIC` & `PING_TEMPLATE` support are added newly, similar to `ALIVE_PIC` & `ALIVE_TEMPLATE` (check @CatTemplates for more info).
+  * Added `PING_PIC` & `PING_TEMPLATE` support are added newly, similar to `ALIVE_PIC` & `ALIVE_TEMPLATE` (check @ArankTemplates for more info).
   * You can save your default profile by using `.setdv DEFAULT_USER`, so that for `.revert` command, spotify and autoprofile plugins, these defaults are used.
   * Added `gis` command for showing google search image with given query.
   * Added spoiler markdown use `||` before and after the spoiler text in your message to get spoiler format.
