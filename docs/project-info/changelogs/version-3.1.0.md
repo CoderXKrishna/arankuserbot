@@ -1,6 +1,6 @@
 # 📄 Version 3.1.0
 
-## Catuserbot Updates 3.0.1 -> 3.1.0
+## Arankuserbot Updates 3.0.1 -> 3.1.0
 
 ## Version : 3.1.0
 
