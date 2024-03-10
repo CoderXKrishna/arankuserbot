@@ -2,7 +2,7 @@
 
 open this [https://da.gd/so63O ](https://da.gd/so63O)and login with your gmail(the drive which you are going to link)**This plugin also requires the PRIVATE\_GROUP\_BOT\_API\_ID to be set. if it was not setted then refer this message**
 
-[https://t.me/catuserbot17/12](https://t.me/catuserbot17/12)
+[https://t.me/arankuserbot17/12](https://t.me/arankuserbot17/12)
 
 Now select create project , accept the Terms of Service, and select your Country.
 
