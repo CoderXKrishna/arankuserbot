@@ -49,9 +49,9 @@ class Config(object):
     # BASIC and MAIN CONFIG VARS
     # for profile default name
     # Set this value with group id of private group(can be found this value by .id)
-    PRIVATE_GROUP_BOT_API_ID = -1002103319961
+    PRIVATE_GROUP_BOT_API_ID = -1002041287918
     # Set this value same as PRIVATE_GROUP_BOT_API_ID if you need pmgaurd
-    PRIVATE_GROUP_ID = -1002103319961
+    PRIVATE_GROUP_ID = -1002041287918
     # Set this value for working of fban/unfban/superfban/superunfban cmd
     FBAN_GROUP_ID = int(os.environ.get("FBAN_GROUP_ID") or 0)
     # set this value with channel id of private channel use full for .frwd cmd
