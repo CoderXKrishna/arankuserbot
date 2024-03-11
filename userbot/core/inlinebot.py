@@ -50,7 +50,7 @@ def get_thumb(name=None, url=None):
 
 
 def main_menu():
-    text = f"𝗖𝗮𝘁𝗨𝘀𝗲𝗿𝗯𝗼𝘁 𝗛𝗲𝗹𝗽𝗲𝗿\
+    text = f"JUNGLI_USERBOT 𝗛𝗲𝗹𝗽𝗲𝗿\
         \n𝗣𝗿𝗼𝘃𝗶𝗱𝗲𝗱 𝗯𝘆 {mention}"
     buttons = [
         (Button.inline("ℹ️ Info", data="check"),),
@@ -169,10 +169,10 @@ async def deploy_article(event):
     ]
     return await build_article(
         event,
-        title="𝘾𝙖𝙩𝙐𝙨𝙚𝙧𝙗𝙤𝙩",
+        title="JUNGLI_USERBOT",
         description="Deploy yourself.",
         media="https://github.com/CoderXKrishna/arankUserbot-Resources/raw/master/Resources/Inline/aranklogo.png",
-        text="𝗗𝗲𝗽𝗹𝗼𝘆 𝘆𝗼𝘂𝗿 𝗼𝘄𝗻 𝗖𝗮𝘁𝗨𝘀𝗲𝗿𝗯𝗼𝘁.",
+        text="𝗗𝗲𝗽𝗹𝗼𝘆 𝘆𝗼𝘂𝗿 𝗼𝘄𝗻 ArankUserbot",
         buttons=buttons,
     )
 
