@@ -1,4 +1,4 @@
-# ARANKUserbot
+# ARANKUSERBOT
 
 A simple Telegram userbot based on Telethon .
 ![arankuserbot logo](https://graph.org/file/c2042d0b982064f382d62.jpg)
@@ -53,7 +53,7 @@ No personal support will be provided / We won't spoon feed you.
 If you need help ask in our support group 
 and we or our friends will try to help you.
 
-Thanks for using our bot 😺
+Thanks for using our bot 👾
 ```
 
 
