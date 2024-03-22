@@ -55,13 +55,13 @@ async def amireallyalive(event):
         ANIME = f"**“{data['quote']}” - {data['character']} ({data['anime']})**"
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    arankevent = await edit_or_reply(event, "`Checking...`")
+    arankevent = await edit_or_reply(event, "`ѕσ нєяє уσυ gσ кαηιѕнкα яєρяєѕєηтѕ........`")
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     _, check_sgnirts = check_data_base_heal_th()
-    EMOJI = gvarstatus("ALIVE_EMOJI") or "  ✥ "
-    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "**✮ MY BOT IS RUNNING SUCCESSFULLY ✮**"
-    arank_IMG = Config.ALIVE_PIC
+    EMOJI = gvarstatus("ALIVE_EMOJI") or " 😘 "
+    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "Your "
+    ARANK_IMG = Config.ALIVE_PIC
     caption = arank_caption.format(
         ALIVE_TEXT=ALIVE_TEXT,
         ANIME=ANIME,
@@ -74,7 +74,7 @@ async def amireallyalive(event):
         dbhealth=check_sgnirts,
         ping=ms,
     )
-    if arank_IMG:
+    if ARANK_IMG:
         arank = list(arank_IMG.split())
         PIC = random.choice(arank)
         try:
