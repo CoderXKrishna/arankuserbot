@@ -55,12 +55,12 @@ async def amireallyalive(event):
         ANIME = f"**“{data['quote']}” - {data['character']} ({data['anime']})**"
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    arankevent = await edit_or_reply(event, "`ѕσ нєяє уσυ gσ кαηιѕнкα яєρяєѕєηтѕ........`")
+    arankevent = await edit_or_reply(event, "`so here you go kanishka represents...`")
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     _, check_sgnirts = check_data_base_heal_th()
     EMOJI = gvarstatus("ALIVE_EMOJI") or "  😘 "
-    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "Mere mr.hitlerrr puchte gusse mein mujhse kya h vo mere?? "
+    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "**Mere mr.hitlerrr puchte gusse mein mujhse kya h vo mere?? **"
     ARANK_IMG = Config.ALIVE_PIC
     caption = arank_caption.format(
         ALIVE_TEXT=ALIVE_TEXT,
