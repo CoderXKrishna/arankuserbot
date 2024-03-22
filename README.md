@@ -1,6 +1,11 @@
 # ARANKUSERBOT
 
-A simple Telegram userbot based on Telethon .
+HEY EVERYONE ,ATTENTION PLEASE!!!!
+YOU KNOW WHAT THE BESTEST BOT OF EVER HAS BEEN CREATED BY US. I KNOW YOU ARE EXCITED TO KNOW WHATS THE NAME OF THAT USERBOT SO HERE LEMME TELL YOU THE NAME COZ I KNOW YOU ARE EAGER TO KNOW.
+SO THAT USERBOT IS....IS....
+THE MARVELLOUS BOT  "JUNGLI USERBOT" WITH HAVING ALOTT OF AMAZING FEATURES LIKE IT'S DATABASE,TELETHON VERSION,PYTHON VERSION ETC ALL ARE SUPERB.
+SO GO AND HAVE FUN BUDDY BY USING THIS MIND BLOWING USERBOT!!
+THANKING YOU💗
 ![arankuserbot logo](https://graph.org/file/c2042d0b982064f382d62.jpg)
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fsandy1709%2Farankuserbot&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://github.com/CoderXKrishna/arankuserbot)
 [![CodeFactor](https://www.codefactor.io/repository/github/CoderXKrishna/arankuserbot/badge?&style=flat-square)](https://www.codefactor.io/repository/github/CoderXKrishna/arankuserbot)
