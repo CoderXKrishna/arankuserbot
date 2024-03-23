@@ -55,7 +55,7 @@ async def amireallyalive(event):
         ANIME = f"**“{data['quote']}” - {data['character']} ({data['anime']})**"
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    arankevent = await edit_or_reply(event, "`so here you go kanishka represents...`")
+    arankevent = await edit_or_reply(event, "`so here you go arank represents...`")
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     _, check_sgnirts = check_data_base_heal_th()
@@ -105,7 +105,7 @@ temp = """{ALIVE_TEXT}
 
 **{EMOJI} Courage :** `Fight Anyone Without Scared Beacause Iam From Your Father's Clan Named Jungli`
 
-**{EMOJI} Your GodFather:** {mention}"""
+**{EMOJI} Robot Rabby:** {mention}"""
 
 
 def arankalive_text():
@@ -117,7 +117,7 @@ def arankalive_text():
     
     arank_caption += f"**{EMOJI} Courage :** `{{Fight Anyone Without Scared Because I am From Your Father's Clan Named Jungli()}}\n`"
     
-    arank_caption += f"**{EMOJI} Your GodFather:** {mention}\n"
+    arank_caption += f"**{EMOJI} Robot Rabby:** {mention}\n"
     return arank_caption
 
 
