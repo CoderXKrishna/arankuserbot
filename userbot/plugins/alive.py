@@ -75,7 +75,7 @@ async def amireallyalive(event):
         ping=ms,
     )
     if ARANK_IMG:
-        arank = list(arank_IMG.split())
+        arank = list(ARANK_IMG.split())
         PIC = random.choice(arank)
         try:
             await event.client.send_file(
@@ -95,7 +95,7 @@ async def amireallyalive(event):
 
 
 temp = f"""{ALIVE_TEXT}
-**{EMOJI} unhe ache se pta hai :** `He is the world of my mine which starts on him and end only on him but still unko jaan na rehta toh bta dete aaj kya hai vo humare liye dekho to be honest ek gaane ki mast si do lines yaad aarhi unke liye pehle toh vo gaaleta hunn fir aage batate kya hai advocate sahab humare liye😌❤️`
+**{EMOJI} unhe ache se pta hai :** `He is the world of my mine which starts on him and end only on him but still unko jaan na rehta toh bta dete aaj kya hai vo mere?? **`
 **{EMOJI} Tareef karunn kya unki jinhone tumhe banaya :** `yeah i m very thankyou to my bestuuu kanha ji unhone meko ye anmol ratna meko diya hai🦋❤️`
 **{EMOJI} or dusra mummy papa ji unka toh jitna thankyou krunn utna kam :** `aaj ke time mein itni achi up bringing mere heere ko itna nikhar diya hai unhone ki 1000 logo ke beech mein alag najar aaye hn thodu sa gussa hojate hai but ache dil ke log jo muh pe bolna pasand krte sach bolte ye fact h vo thoddu sa gussa krne wale hote mere bade bachuuu bhi unmein se he ek...jaan basti hai jaan meri uss ek praani mein or vo puchta hunn kon mai meko i love you beyond infinity mr.hitlerrr🥺❤️🤧`
 **{EMOJI} meri baat na hopati jab jo frustation :** `bhi pe nikalti gussa banke vo abhi he janta bs or idhar ye budha bolta yaad aaye tab toh msg krre na shi mein lagta meko yaad na aati🥺🤧`
@@ -130,9 +130,3 @@ async def amireallyalive(event):
     results = await event.client.inline_query(Config.TG_BOT_USERNAME, "ialive")
     await results[0].click(event.chat_id, reply_to=reply_to_id, hide_via=True)
     await event.delete()
-
-
-@arankub.tgbot.on(CallbackQuery(data=re.compile(b"stats")))
-async def on_plug_in_callback_query_handler(event):
-    statstext = await arankalive(StartTime)
-    await event.answer(statstext, cache_time=0, alert=True)
