@@ -137,15 +137,15 @@ async def do_pm_permit_action(event, chat):  # sourcery no-metrics
             remwarns=remwarns,
         )
     elif gvarstatus("pmmenu") is None:
-        USER_BOT_NO_WARN = f"""__Hi__ {mention}__, I haven't approved you yet to personal message me. 
+        USER_BOT_NO_WARN = f"""__Heyy__ {mention}__, You Beaware From My Master!! 🤬😈My Master Is One Of The Dangerous Fighter Over The Telegram And Real Life Because He Is The Member Of Jungli Clan. 
 
-You have {warns}/{totalwarns} warns until you get blocked by the arankUserbot.
+You Have {warns}/{totalwarns} Warns Untill You Get Blocked By Your Father Who Made Me.
 
-Choose an option from below to specify the reason of your message and wait for me to check it. __⬇️"""
+Attention Please ❌🤬 You'r Spamming On My Master Dm And I can't Tolerate Because He Made Me Because Of SenseLess And Some Of Ullu Ke Pathoo Ke liye So Just Wait For My Master Regards Jungli Arank Userbot. __😌"""
     else:
         USER_BOT_NO_WARN = f"""__Hi__ {mention}__, I haven't approved you yet to personal message me.
 
-You have {warns}/{totalwarns} warns until you get blocked by the arankUserbot.
+You Have {warns}/{totalwarns} Warns Untill You Get Blocked By Your Father Who Made Me.
 
 Don't spam my inbox. say reason and wait until my response.__"""
     addgvar("PM_TEXT", USER_BOT_NO_WARN)
