@@ -105,7 +105,7 @@ temp = """{ALIVE_TEXT}
 
 **{EMOJI} Courage :** `Fight Anyone Without Scared Beacause Iam From Your Father's Clan Named Jungli`
 
-**{EMOJI} Your Father:** {mention}"""
+**{EMOJI} Robot Rabby:** {mention}"""
 
 
 def arankalive_text():
@@ -117,7 +117,7 @@ def arankalive_text():
     
     arank_caption += f"**{EMOJI} Courage :** `{{Fight Anyone Without Scared Because I am From Your Father's Clan Named Jungli()}}\n`"
     
-    arank_caption += f"**{EMOJI} Master:** {mention}\n"
+    arank_caption += f"**{EMOJI} Robot Rabby:** {mention}\n"
     return arank_caption
 
 
