@@ -55,13 +55,13 @@ async def amireallyalive(event):
         ANIME = f"**“{data['quote']}” - {data['character']} ({data['anime']})**"
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    arankevent = await edit_or_reply(event, "`so here you go kanishka represents...`")
+    arankevent = await edit_or_reply(event, "`Checking...`")
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     _, check_sgnirts = check_data_base_heal_th()
-    EMOJI = gvarstatus("ALIVE_EMOJI") or "  😘 "
-    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "**Mere mr.hitlerrr puchte gusse mein mujhse kya h vo mere?? **"
-    ARANK_IMG = Config.ALIVE_PIC
+    EMOJI = gvarstatus("ALIVE_EMOJI") or "  ✥ "
+    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "**✮ MY BOT IS RUNNING SUCCESSFULLY ✮**"
+    arank_IMG = Config.ALIVE_PIC
     caption = arank_caption.format(
         ALIVE_TEXT=ALIVE_TEXT,
         ANIME=ANIME,
@@ -74,8 +74,8 @@ async def amireallyalive(event):
         dbhealth=check_sgnirts,
         ping=ms,
     )
-    if ARANK_IMG:
-        arank = list(ARANK_IMG.split())
+    if arank_IMG:
+        arank = list(arank_IMG.split())
         PIC = random.choice(arank)
         try:
             await event.client.send_file(
@@ -94,22 +94,22 @@ async def amireallyalive(event):
         )
 
 
-temp = f"""{ALIVE_TEXT}
-**{EMOJI} unhe ache se pta hai :** `He is the world of my mine which starts on him and end only on him but still unko jaan na rehta toh bta dete aaj kya hai vo mere?? **`
+temp = """{ALIVE_TEXT}
+**{EMOJI} unhe ache se pta hai :** `He is the world of my mine which starts on him and end only on him but still unko jaan na rehta toh bta dete aaj kya hai vo humare liye dekho to be honest ek gaane ki mast si do lines yaad aarhi unke liye pehle toh vo gaaleta hunn fir aage batate kya hai advocate sahab humare liye😌❤️`
 **{EMOJI} Tareef karunn kya unki jinhone tumhe banaya :** `yeah i m very thankyou to my bestuuu kanha ji unhone meko ye anmol ratna meko diya hai🦋❤️`
 **{EMOJI} or dusra mummy papa ji unka toh jitna thankyou krunn utna kam :** `aaj ke time mein itni achi up bringing mere heere ko itna nikhar diya hai unhone ki 1000 logo ke beech mein alag najar aaye hn thodu sa gussa hojate hai but ache dil ke log jo muh pe bolna pasand krte sach bolte ye fact h vo thoddu sa gussa krne wale hote mere bade bachuuu bhi unmein se he ek...jaan basti hai jaan meri uss ek praani mein or vo puchta hunn kon mai meko i love you beyond infinity mr.hitlerrr🥺❤️🤧`
 **{EMOJI} meri baat na hopati jab jo frustation :** `bhi pe nikalti gussa banke vo abhi he janta bs or idhar ye budha bolta yaad aaye tab toh msg krre na shi mein lagta meko yaad na aati🥺🤧`
 **{EMOJI} Budhe i wanna do kabaddi with youuuu :** `Budhe mere pe hazaar reason ho chuke hai 8 reason or milte he 1008 pe teri gardan kat dunga mai jaise krishna bhagwàan ji ne kaati thi so sudhar jaa aise drame na krrak kr samjha praan nikal jaate idhar or udhar nautanki tang krne se baaj na aawe apne paap ka ghada bhar mat budhe nhi toh acha nhi hoga tere liye samjha budhe`
-**{EMOJI} Your Robot Rabby:** {mention}"""
+**{EMOJI} Master:** {mention}"""
 
 
 def arankalive_text():
-    EMOJI = gvarstatus("ALIVE_EMOJI") or "  😘 "
+    EMOJI = gvarstatus("ALIVE_EMOJI") or "  ✥ "
     arank_caption = "**arankuserbot is Up and Running**\n"
     arank_caption += f"**{EMOJI} unhe ache se pta hai :** `{{He is the world of my mine which starts on him and end only on him}}\n`"
     arank_caption += f"**{EMOJI} Tareef karunn kya unki jinhone tumhe banaya :** `Budhe i wanna do kabaddi with youuuu`\n"
     arank_caption += f"**{EMOJI} or dusra mummy papa ji unka toh jitna thankyou krunn utna kam :** `meri baat na hopati jab jo frustation()`\n"
-    arank_caption += f"**{EMOJI} Your Robot Rabby:** {mention}\n"
+    arank_caption += f"**{EMOJI} Robot Rabby:** {mention}\n"
     return arank_caption
 
 
@@ -130,3 +130,9 @@ async def amireallyalive(event):
     results = await event.client.inline_query(Config.TG_BOT_USERNAME, "ialive")
     await results[0].click(event.chat_id, reply_to=reply_to_id, hide_via=True)
     await event.delete()
+
+
+@arankub.tgbot.on(CallbackQuery(data=re.compile(b"stats")))
+async def on_plug_in_callback_query_handler(event):
+    statstext = await arankalive(StartTime)
+    await event.answer(statstext, cache_time=0, alert=True)
