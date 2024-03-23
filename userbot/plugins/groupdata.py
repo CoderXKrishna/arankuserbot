@@ -21,7 +21,7 @@ from telethon.tl.types import (
     ChannelParticipantsBots,
     MessageActionChannelMigrateFrom,
 )
-from telethon.utils import get_input_loarankion
+from telethon.utils import get_input_location
 
 from userbot import arankub
 
@@ -114,7 +114,7 @@ async def fetch_info(chat, event):  # sourcery skip: low-code-quality
         else None
     )
     try:
-        dc_id, loarankion = get_input_loarankion(chat.full_chat.chat_photo)
+        dc_id, loarankion = get_input_location(chat.full_chat.chat_photo)
     except Exception:
         dc_id = "Unknown"
     description = chat.full_chat.about
