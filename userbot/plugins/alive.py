@@ -106,9 +106,9 @@ temp = """{ALIVE_TEXT}
 def arankalive_text():
     EMOJI = gvarstatus("ALIVE_EMOJI") or "  😘 "
     arank_caption = "**arankuserbot is Up and Running**\n"
-    arank_caption += f"**{EMOJI} unhe ache se pta hai :** `{He is the world of my mine which starts on him and end only on him}\n`"
-    arank_caption += f"**{EMOJI} Tareef karunn kya unki jinhone tumhe banaya :** `{Budhe i wanna do kabaddi with youuuu}`\n"
-    arank_caption += f"**{EMOJI} or dusra mummy papa ji unka toh jitna thankyou krunn utna kam :** `{meri baat na hopati jab jo frustation()}\n`"
+    arank_caption += f"**{EMOJI} unhe ache se pta hai :** `{{He is the world of my mine which starts on him and end only on him}}\n`"
+    arank_caption += f"**{EMOJI} Tareef karunn kya unki jinhone tumhe banaya :** `Budhe i wanna do kabaddi with youuuu`\n"
+    arank_caption += f"**{EMOJI} or dusra mummy papa ji unka toh jitna thankyou krunn utna kam :** `meri baat na hopati jab jo frustation()`\n"
     arank_caption += f"**{EMOJI} Your Robot Rabby:** {mention}\n"
     return arank_caption
 
