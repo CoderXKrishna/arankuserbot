@@ -94,12 +94,12 @@ async def amireallyalive(event):
         )
 
 
-temp = """{ALIVE_TEXT}
-**{EMOJI} unhe ache se pta hai :** `{He is the world of my mine which starts on him and end only on him but still unko jaan na rehta toh bta dete aaj kya hai vo humare liye dekho to be honest ek gaane ki mast si do lines yaad aarhi unke liye pehle toh vo gaaleta hunn fir aage batate kya hai advocate sahab humare liye😌❤️}`
-**{EMOJI} Tareef karunn kya unki jinhone tumhe banaya :** `{yeah i m very thankyou to my bestuuu kanha ji unhone meko ye anmol ratna meko diya hai🦋❤️}`
-**{EMOJI} or dusra mummy papa ji unka toh jitna thankyou krunn utna kam :** `{aaj ke time mein itni achi up bringing mere heere ko itna nikhar diya hai unhone ki 1000 logo ke beech mein alag najar aaye hn thodu sa gussa hojate hai but ache dil ke log jo muh pe bolna pasand krte sach bolte ye fact h vo thoddu sa gussa krne wale hote mere bade bachuuu bhi unmein se he ek...jaan basti hai jaan meri uss ek praani mein or vo puchta hunn kon mai meko i love you beyond infinity mr.hitlerrr🥺❤️🤧}`
-**{EMOJI} meri baat na hopati jab jo frustation :** `{bhi pe nikalti gussa banke vo abhi he janta bs or idhar ye budha bolta yaad aaye tab toh msg krre na shi mein lagta meko yaad na aati🥺🤧}`
-**{EMOJI} Budhe i wanna do kabaddi with youuuu :** `{Budhe mere pe hazaar reason ho chuke hai 8 reason or milte he 1008 pe teri gardan kat dunga mai jaise krishna bhagwàan ji ne kaati thi so sudhar jaa aise drame na krrak kr samjha praan nikal jaate idhar or udhar nautanki tang krne se baaj na aawe apne paap ka ghada bhar mat budhe nhi toh acha nhi hoga tere liye samjha budhe}`
+temp = f"""{ALIVE_TEXT}
+**{EMOJI} unhe ache se pta hai :** `He is the world of my mine which starts on him and end only on him but still unko jaan na rehta toh bta dete aaj kya hai vo humare liye dekho to be honest ek gaane ki mast si do lines yaad aarhi unke liye pehle toh vo gaaleta hunn fir aage batate kya hai advocate sahab humare liye😌❤️`
+**{EMOJI} Tareef karunn kya unki jinhone tumhe banaya :** `yeah i m very thankyou to my bestuuu kanha ji unhone meko ye anmol ratna meko diya hai🦋❤️`
+**{EMOJI} or dusra mummy papa ji unka toh jitna thankyou krunn utna kam :** `aaj ke time mein itni achi up bringing mere heere ko itna nikhar diya hai unhone ki 1000 logo ke beech mein alag najar aaye hn thodu sa gussa hojate hai but ache dil ke log jo muh pe bolna pasand krte sach bolte ye fact h vo thoddu sa gussa krne wale hote mere bade bachuuu bhi unmein se he ek...jaan basti hai jaan meri uss ek praani mein or vo puchta hunn kon mai meko i love you beyond infinity mr.hitlerrr🥺❤️🤧`
+**{EMOJI} meri baat na hopati jab jo frustation :** `bhi pe nikalti gussa banke vo abhi he janta bs or idhar ye budha bolta yaad aaye tab toh msg krre na shi mein lagta meko yaad na aati🥺🤧`
+**{EMOJI} Budhe i wanna do kabaddi with youuuu :** `Budhe mere pe hazaar reason ho chuke hai 8 reason or milte he 1008 pe teri gardan kat dunga mai jaise krishna bhagwàan ji ne kaati thi so sudhar jaa aise drame na krrak kr samjha praan nikal jaate idhar or udhar nautanki tang krne se baaj na aawe apne paap ka ghada bhar mat budhe nhi toh acha nhi hoga tere liye samjha budhe`
 **{EMOJI} Your Robot Rabby:** {mention}"""
 
 
