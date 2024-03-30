@@ -107,8 +107,8 @@ async def do_pm_permit_action(event, chat):  # sourcery no-metrics
                             \n[{get_display_name(chat)}](tg://user?id={chat.id}) is blocked\
                             \n**Message Count:** {PM_WARNS[str(chat.id)]}"
         del PM_WARNS[str(chat.id)]
-        sql.del_collection("pmwarns")
-        sql.del_collection("pmmessagecache")
+        #sql.del_collection("pmwarns")
+        #sql.del_collection("pmmessagecache")
         sql.add_collection("pmwarns", PM_WARNS, {})
         sql.add_collection("pmmessagecache", PMMESSAGE_CACHE, {})
         try:
