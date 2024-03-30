@@ -39,7 +39,7 @@ LOG_CHATS_ = LOG_CHATS()
 async def monito_p_m_s(event):  # sourcery no-metrics
     if Config.PM_LOGGER_GROUP_ID == -100:
         return
-    if gvarstatus("PMLOG") and gvarstatus("PMLOG") == "false":
+    if gvarstatus("PMLOG") and gvarstatus("PMLOG") == "True":
         return
     sender = await event.get_sender()
     if not sender.bot:
