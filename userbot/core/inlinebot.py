@@ -187,6 +187,7 @@ async def pmpermit_article(event):
         media = random.choice(PIC)
     return await build_article(
         event,
+        title='JustTesting',
         media=media,
         text=query,
         buttons=buttons,
