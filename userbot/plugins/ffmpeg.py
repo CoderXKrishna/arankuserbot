@@ -101,7 +101,7 @@ async def convert_video(video_file, output_directory, crf, total_time, bot, mess
             with contextlib.suppress(Exception):
                 await message.edit(text=stats)
     # Wait for the subprocess to finish
-    stdout, stderr = await process.communiaranke()
+    stdout, stderr = await process.communicate()
     return out_put_file_name if os.path.lexists(out_put_file_name) else None
 
 
@@ -119,7 +119,7 @@ async def cult_small_video(
         stderr=asyncio.subprocess.PIPE,
     )
     # Wait for the subprocess to finish
-    await process.communiaranke()
+    await process.communicate()
     return out_put_file_name if os.path.lexists(out_put_file_name) else None
 
 
