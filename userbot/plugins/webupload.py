@@ -154,7 +154,7 @@ async def _(event):
     process = await asyncio.create_subprocess_shell(
         cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
     )
-    stdout, stderr = await process.communiaranke()
+    stdout, stderr = await process.communicate()
     error = stderr.decode().strip()
     if t_response := stdout.decode().strip():
         try:
