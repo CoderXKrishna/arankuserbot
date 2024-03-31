@@ -139,9 +139,4 @@ async def amireallyalive(event):
 @arankub.tgbot.on(CallbackQuery(data=re.compile(b"stats")))
 async def on_plug_in_callback_query_handler(event):
     statstext = await arankalive(StartTime)
-    try:
-        await event.answer(statstext, cache_time=0, alert=True)
-    except MessageTooLongError:
-        # If the message is too long, send a shorter message or split it into multiple parts
-        short_statstext = "Kaisan Ba."
-        await event.answer(short_statstext, cache_time=0, alert=True)
+    await event.answer(statstext, cache_time=0, alert=True)
