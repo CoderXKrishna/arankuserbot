@@ -112,14 +112,10 @@ def arankalive_text():
     EMOJI = gvarstatus("ALIVE_EMOJI") or "  => "
     arank_caption = "**arankuserbot is Up and Running**\n"
     arank_caption += f"**{EMOJI} Knock Knock :** `{{Who's There? Father, Father Who? Your GodFather}}\n`"
-    
     arank_caption += f"**{EMOJI} Behaviour :** `Ahh! Babess My Behaviour Depends On Your Actions`\n"
-    
     arank_caption += f"**{EMOJI} Courage :** `{{Fight Anyone Without Scared Because I am From Your Father's Clan Named Jungli()}}\n`"
-    
     arank_caption += f"**{EMOJI} Your Daddy:** {mention}\n"
     return arank_caption
-
 
 @arankub.arank_cmd(
     pattern="ialive$",
