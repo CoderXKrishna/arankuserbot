@@ -45,7 +45,7 @@ async def get_pip_packages(requirements):
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.PIPE,
         )
-        stdout, _ = await cmd.communiaranke()
+        stdout, _ = await cmd.communicate()
         packages = stdout.decode("utf-8")
     tmp = package_patern.findall(packages)
     return [package.lower() for package in tmp]
@@ -61,7 +61,7 @@ async def install_pip_packages(packages):
         stdout=asyncio.subprocess.PIPE,
         stderr=asyncio.subprocess.PIPE,
     )
-    await cmd.communiaranke()
+    await cmd.communicate()
     return cmd.returncode == 0
 
 
