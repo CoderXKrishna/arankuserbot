@@ -621,7 +621,7 @@ async def _(event):
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.PIPE,
         )
-        stdout, stderr = await process.communiaranke()
+        stdout, stderr = await process.communicate()
         stderr.decode().strip()
         stdout.decode().strip()
         os.remove(downloaded_file_name)
