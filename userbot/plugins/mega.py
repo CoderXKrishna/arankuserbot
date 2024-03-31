@@ -49,7 +49,7 @@ TMP_DOWNLOAD_DIRECTORY = Config.TMP_DOWNLOAD_DIRECTORY
 
 async def subprocess_run(megadl, cmd):
     subproc = await asyncSubprocess(cmd, stdout=asyncPIPE, stderr=asyncPIPE)
-    stdout, stderr = await subproc.communiaranke()
+    stdout, stderr = await subproc.communicate()
     exitCode = subproc.returncode
     if exitCode != 0:
         await megadl.edit(
