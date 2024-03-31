@@ -104,7 +104,7 @@ async def update_requirements():
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.PIPE,
         )
-        await process.communiaranke()
+        await process.communicate()
         return process.returncode
     except Exception as e:
         return repr(e)
