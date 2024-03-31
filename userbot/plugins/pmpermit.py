@@ -71,6 +71,7 @@ async def do_pm_permit_action(event, chat):  # sourcery no-metrics
         MAX_FLOOD_IN_PMS = 6
     totalwarns = MAX_FLOOD_IN_PMS + 1
     warns = PM_WARNS[str(chat.id)] + 1
+    LOGS.info(str(warns))
     remwarns = totalwarns - warns
     if PM_WARNS[str(chat.id)] >= MAX_FLOOD_IN_PMS:
         try:
@@ -107,8 +108,8 @@ async def do_pm_permit_action(event, chat):  # sourcery no-metrics
                             \n[{get_display_name(chat)}](tg://user?id={chat.id}) is blocked\
                             \n**Message Count:** {PM_WARNS[str(chat.id)]}"
         del PM_WARNS[str(chat.id)]
-        #sql.del_collection("pmwarns")
-        #sql.del_collection("pmmessagecache")
+        sql.del_collection("pmwarns")
+        sql.del_collection("pmmessagecache")
         sql.add_collection("pmwarns", PM_WARNS, {})
         sql.add_collection("pmmessagecache", PMMESSAGE_CACHE, {})
         try:
@@ -120,32 +121,21 @@ async def do_pm_permit_action(event, chat):  # sourcery no-metrics
             return
     custompmpermit = gvarstatus("PM_TEXT") or None
     if custompmpermit is not None:
-        USER_BOT_NO_WARN = custompmpermit.format(
-            mention=mention,
-            first=first,
-            last=last,
-            fullname=fullname,
-            username=username,
-            userid=userid,
-            my_first=my_first,
-            my_last=my_last,
-            my_fullname=my_fullname,
-            my_username=my_username,
-            my_mention=my_mention,
-            totalwarns=totalwarns,
-            warns=warns,
-            remwarns=remwarns,
-        )
+        USER_BOT_NO_WARN = f"""__Hi__ {mention}__, I haven't approved you yet to personal message me. 
+
+You have {warns}/{totalwarns} warns until you get blocked by the arankUserbot.
+
+Choose an option from below to specify the reason of your message and wait for me to check it. __⬇️"""
     elif gvarstatus("pmmenu") is None:
-        USER_BOT_NO_WARN = f"""__Heyy__ {mention}__, You Beaware From My Master!! 🤬😈My Master Is One Of The Dangerous Fighter Over The Telegram And Real Life Because He Is The Member Of Jungli Clan. 
+        USER_BOT_NO_WARN = f"""__Hi__ {mention}__, You Beaware From My Master!! 🤬😈My Master Is One Of The Dangerous Fighter Over The Telegram And Real Life Because He Is The Member Of Jungli Clan. 
 
-You Have {warns}/{totalwarns} Warns Untill You Get Blocked By Your Father Who Made Me.
+You have {warns}/{totalwarns} warns until you get blocked by the arankUserbot.
 
-Attention Please ❌🤬 You'r Spamming On My Master Dm And I can't Tolerate Because He Made Me Because Of SenseLess And Some Of Ullu Ke Pathoo Ke liye So Just Wait For My Master Regards Jungli Arank Userbot. __😌"""
+Attention Please ❌🤬 You'r Spamming On My Master Dm And I can't Tolerate Because He Made Me Because Of SenseLess And Some Of Ullu Ke Pathoo Ke liye So Just Wait For My Master Regards Jungli Arank Userbot. 😌"""
     else:
         USER_BOT_NO_WARN = f"""__Hi__ {mention}__, I haven't approved you yet to personal message me.
 
-You Have {warns}/{totalwarns} Warns Untill You Get Blocked By Your Father Who Made Me.
+You have {warns}/{totalwarns}  Warns Untill You Get Blocked By Your Father Who Made Me..
 
 Don't spam my inbox. say reason and wait until my response.__"""
     addgvar("PM_TEXT", USER_BOT_NO_WARN)
